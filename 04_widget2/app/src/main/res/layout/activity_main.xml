@@ -57,4 +57,10 @@
         android:id="@+id/btnOk"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
+
+    <ToggleButton
+        android:textOn="ON"
+        android:textOff="OFF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 </LinearLayout>
