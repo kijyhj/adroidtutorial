@@ -21,10 +21,12 @@
             android:text="ID : " />
 
         <EditText
+            android:id="@+id/editID"
             android:layout_width="100dp"
             android:layout_height="wrap_content" />
     </LinearLayout>
     <Button
+        android:onClick="onLoginClick"
         android:text="클릭"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
