@@ -16,4 +16,45 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Hello World!" />
+
+    <CheckBox
+        android:id="@+id/myCheckBox"
+        android:textSize="30dp"
+        android:text="myCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <RadioGroup
+        android:id="@+id/myRadioGroupup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:id="@+id/radio1"
+            android:text="Radio1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <RadioButton
+            android:id="@+id/radio2"
+            android:text="Radio2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <RadioButton
+            android:id="@+id/radio3"
+            android:text="Radio3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RadioGroup>
+
+    <EditText
+        android:inputType="number"
+        android:hint="input hear"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:text="OK"
+        android:id="@+id/btnOk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 </LinearLayout>
