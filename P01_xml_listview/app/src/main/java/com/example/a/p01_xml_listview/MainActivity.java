@@ -4,6 +4,7 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
 
 import org.w3c.dom.Document;
@@ -84,5 +85,8 @@ public class MainActivity extends AppCompatActivity {
 
         MyDomParser myDom = new MyDomParser();
         myDom.execute("http://www.kma.go.kr/wid/queryDFSRSS.jsp?zone=1153052000");
+
+        ImageView iv = (ImageView) findViewById(R.id.testImg);
+        iv.setImageResource(R.drawable.rain);
     }
 }
