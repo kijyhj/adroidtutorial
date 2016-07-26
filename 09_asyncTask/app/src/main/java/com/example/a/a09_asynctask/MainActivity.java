@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -13,12 +14,18 @@ public class MainActivity extends AppCompatActivity {
     class MyAsyncTask extends AsyncTask<Integer, Integer, String>{
 
         @Override
+        protected void onPostExecute(String s) {
+            super.onPostExecute(s);
+            Toast.makeText(MainActivity.this, s, Toast.LENGTH_SHORT).show();
+        }
+
+        @Override
         protected String doInBackground(Integer... params) {
             int startValue = params[0];
 
             for(int i = startValue ; i < 100 ; i++){
                 Log.d("asyncTask", "count : " + i);
-
+                publishProgress(i);
                 try {
                     Thread.sleep(100);
                 } catch (InterruptedException e) {
@@ -26,7 +33,13 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
 
-            return null;
+            return "DONE";
+        }
+
+        @Override
+        protected void onProgressUpdate(Integer... values) {
+            super.onProgressUpdate(values);
+            textView.setText("Count : " + values[0]);
         }
     }
 
