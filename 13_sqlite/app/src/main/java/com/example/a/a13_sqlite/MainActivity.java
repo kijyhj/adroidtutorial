@@ -9,5 +9,15 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        TestDbHandler dbHandler = new TestDbHandler(this);
+        dbHandler.insert("홍길동", 10, "서울");
+        dbHandler.insert("김길동", 20, "인천");
+        dbHandler.insert("abcd", 30, "부산");
+
+        dbHandler.delete("abcd");
+        dbHandler.update("김길동", 40);
+
+        dbHandler.selectAll();
     }
 }
