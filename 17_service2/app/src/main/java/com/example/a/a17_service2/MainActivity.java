@@ -40,6 +40,8 @@ public class MainActivity extends AppCompatActivity {
         int num = myService.getRanDomNumber();
 
         Toast.makeText(MainActivity.this, "num : " + num, Toast.LENGTH_SHORT).show();
+
+        MyIntentService.startActionFoo(this, "abc", "def");
     }
 
     @Override
