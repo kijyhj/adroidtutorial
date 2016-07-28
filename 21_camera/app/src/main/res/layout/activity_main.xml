@@ -16,6 +16,8 @@
         android:layout_height="wrap_content"
         android:text="Hello World!" />
     <ImageView
+        android:scaleType="fitXY"
+        android:src="@drawable/chrysanthemum"
         android:id="@+id/imageView"
         android:layout_below="@+id/btn"
         android:layout_width="match_parent"
