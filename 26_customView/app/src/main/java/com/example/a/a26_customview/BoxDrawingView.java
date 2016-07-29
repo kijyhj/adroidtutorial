@@ -42,7 +42,7 @@ public class BoxDrawingView extends View {
             Box box = boxArray.get(i);
             float left = Math.min(box.pointOrigin.x, box.pointCurent.x);
             float right = Math.max(box.pointOrigin.x, box.pointCurent.x);
-            float top = Math.min(box.pointOrigin.y box.pointCurent.y);
+            float top = Math.min(box.pointOrigin.y ,box.pointCurent.y);
             float botomt = Math.max(box.pointOrigin.y, box.pointCurent.y);
             canvas.drawRect(left, right, top, botomt, boxPaint);
         }
